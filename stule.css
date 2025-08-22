@@ -1,0 +1,480 @@
+@font-face {
+    font-family: ShortBaby;
+    src: url(ShortBaby-Mg2w.ttf) format('truetype');
+}
+
+body {
+    background-color: rgb(40, 100, 134);
+
+    font-family: ShortBaby, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 80px;
+    padding: 20px;
+
+}
+
+.left {
+    background-color: black;
+
+
+    height: 89vh;
+    border-radius: 50px;
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.right {
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+}
+
+.profile img {
+    width: 75%;
+    height: auto;
+    border-radius: 50%;
+
+}
+
+.profile p {
+    font-family: ShortBaby, sans-serif;
+    font-size: 20px;
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    
+}
+
+.nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+    color: whitesmoke;
+    margin: 30px;
+    font-size: 25px;
+    
+}
+
+.nav>a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: ShortBaby, sans-serif;
+    font-size: 20px;
+    margin-top: 2px;
+    
+}
+
+.nav:hover {
+    color: gold;
+}
+
+.nav>a:hover {
+    color: silver;
+}
+
+.material-symbol-outlined {
+    text-align: left;
+    color: whitesmoke;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.nav:hover .material-symbols-outlined {
+    animation: spin 1s linear infinite;
+}
+
+.nav>a:hover {
+    color: silver;
+    text-shadow: 0 0 5px silver, 0 0 10px gold;
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+.nav>a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.nav:hover a {
+    animation: wave 1s ease-in-out infinite;
+}
+
+#ss {
+    display: flex;
+    margin-top: 2%;
+    margin-right: 6%;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+    }
+
+    50% {
+        text-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
+    }
+
+    100% {
+        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+    }
+}
+
+.dtitle {
+    animation: glow 1s infinite, bounce 1s ease-in-out infinite;
+
+}
+
+
+.profile img {
+    width: 75%;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.6s ease;
+}
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes autoFlip {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.profile {
+    perspective: 1000px;
+}
+
+.profile img {
+    width: 75%;
+    height: auto;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    animation: autoFlip 11s linear infinite;
+}
+
+
+
+@keyframes bellShake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    15% {
+        transform: rotate(-15deg);
+    }
+
+    30% {
+        transform: rotate(15deg);
+    }
+
+    45% {
+        transform: rotate(-10deg);
+    }
+
+    60% {
+        transform: rotate(10deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    90% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#noti {
+    display: inline-block;
+    transform-origin: top center;
+}
+
+#noti {
+    animation: bellShake 0.9s ease-in-out infinite;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    color: whitesmoke;
+    font-size: 34px;
+}
+
+#ss input {
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 75px;
+    height: 25%;
+    margin-top: -6px;
+    width: 100%;
+    animation: pulse 5s ease-in-out infinite;
+
+}
+#ss input:focus {
+    outline: none;
+    box-shadow: 0 0 5px gold, 0 0 10px gold;
+}
+#activities h1{
+    background-color: white;
+    padding: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 91.85%;
+    
+}
+#activities img {
+    border-radius: 0 0 70px 70px;
+}
+
+#hi{
+    border-radius: 100px 100px 0 0;
+    padding: 30px;
+    font-size: 50px;
+
+}
+
+
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100px; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+.nav {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgb(255, 255, 255) 0%, transparent 70%);
+  animation: sparkleTrail 2s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes sparkleTrail {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+
+
+
+#data h2{
+    text-align: center;
+    color: whitesmoke;
+    font-size: 34px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+@keyframes bounceFlipSpark {
+  0% {
+    transform: scale(0.5) rotateX(-90deg);
+    opacity: 0;
+    text-shadow: none;
+  }
+  50% {
+    transform: scale(1.2) rotateX(20deg);
+    opacity: 0.7;
+    text-shadow: 0 0 10px #ffd700;
+  }
+  70% {
+    transform: scale(0.9) rotateX(-10deg);
+    text-shadow: 0 0 15px #ffecb3;
+  }
+  100% {
+    transform: scale(1) rotateX(0deg);
+    opacity: 1;
+    text-shadow: 0 0 8px #fff;
+  }
+}
+@keyframes shimmerPulse {
+  0%, 100% { text-shadow: 0 0 8px #fff; }
+  50% { text-shadow: 0 0 25px #ffd700; }
+}
+
+#data h2 {
+  font-size: 34px;
+  color: whitesmoke;
+  animation: bounceFlipSpark 1.3s ease-in-out forwards 3, shimmerPulse 1.2s infinite;
+
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: underline ;
+}
+
+
+
+
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 91.85%; }
+}
+
+@keyframes blinkCursor {
+  0%, 100% { border-right-color: transparent; }
+  50% { border-right-color: black; }
+}
+
+_________________________________{
+  
+
+
+  animation: 
+    typewriter 8s steps(200) forwards,
+    blinkCursor 0.5s step-end infinite;
+
+}
+
+.cardcon{
+    display: flex;
+    gap: 20px;
+
+    align-items: center;
+    flex-wrap: wrap;
+}
+.ch{
+    font-size: 24px;
+}
+.card{
+    width: 140px;
+    height: 120px;
+    border-radius: 25px;
+    margin: auto;
+    padding: 20px;
+}
+.card1{
+    background-color: lightgreen
+}
